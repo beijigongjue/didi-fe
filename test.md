@@ -14,3 +14,6 @@
 ####插件设置&使用&快捷键
 	Browse package ＝》find your package folder ＝》 read
 *PS：建议有问题找官方文档耐心仔细去查阅，一定会有意想不到的收获*
+
+
+[Git简易指南](http://www.bootcss.com/p/git-guide/)
