@@ -8,6 +8,7 @@ Something of didi frontend
 
 ###MVC模式
 *写这段的目的是帮助大家更好的理解前后台是怎么协调的*
+
 1. MVC开发模式－－M（Model）C（Controller）V（View）。
 2. 两个分离－－数据M和行为C分离，行为C和表现V分离，V就是FE的一亩三分地。
 3. MVC跟传统的asp、jsp、php最大的不同就在于，以往用户请求都是直接请求一个文件，而MVC请求的是action，action是Controller中的方法比如我们访问`http://test.diditaxi.com.cn/api/v2/weixinapi` `weixinapi`就是一个Controller对应着controllers文件夹下的`weixinapi.php`。
@@ -17,18 +18,19 @@ Something of didi frontend
 *PS：想了解更详细的细节请再沟通*
 
 ###113服务器
-`xiaoju@113.11.197.199 端口22 密码请找相关的人取`
-静态路径：`/home/xiaoju/webroot/` 可以建立自己的静态路径如jb
-访问路径：http://113.11.197.199/jb/example.html
-项目路径：`/home/xiaoju/app/api/v2`v2下面有models，controllers，views就是MVC。
-访问路径：`http://113.11.197.199/api/v2/weixinapi`
+- `xiaoju@113.11.197.199 端口22 密码请找相关的人取`
+- 静态路径：`/home/xiaoju/webroot/` 可以建立自己的静态路径如jb
+- 访问路径：http://113.11.197.199/jb/example.html
+- 项目路径：`/home/xiaoju/app/api/v2`v2下面有models，controllers，views就是MVC。
+- 访问路径：`http://113.11.197.199/api/v2/weixinapi`
 
 
 ###118服务器--曾经的218
-`xiaoju@118.244.193.242 端口22 密码请找相关的人取`这个IP绑定的域名是`http://test.diditaxi.com.cn`
-静态路径：/home/xiaoju/developers/ 可以建立自己的静态路径如jb
-访问路径：http://test.diditaxi.com.cn/jb/example.html
-项目路径：`/home/xiaoju/developers/hongbao/api/v2`这个hongbao被重定向到了api/v2/也就是说http://test.diditaxi.com.cn/hongbao/api/v2/weixinapi跟http://test.diditaxi.com.cn/api/v2/
+
+- `xiaoju@118.244.193.242 端口22 密码请找相关的人取`这个IP绑定的域名是`http://test.diditaxi.com.cn`
+- 静态路径：/home/xiaoju/developers/ 可以建立自己的静态路径如jb
+- 访问路径：http://test.diditaxi.com.cn/jb/example.html
+- 项目路径：`/home/xiaoju/developers/hongbao/api/v2`这个hongbao被重定向到了api/v2/也就是说http://test.diditaxi.com.cn/hongbao/api/v2/weixinapi跟http://test.diditaxi.com.cn/api/v2/
 
 ##vpn
 1. 先找OP申请vpn，然后登录`http://vpn.xiaojukeji.com:8000`上面有使用说明以及需要的证书软件
