@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>面向对象写插件</title>
+	<script type="text/javascript">
+	// var didi = {
+	// 	demoPlugin:function(){
+	// 		return function(){
+	// 			console.log("xx");
+	// 		}
+	// 	}
+	// };
+	</script>
+	<script type="text/javascript" src="demoPlugin.js"></script>
+	<script type="text/javascript">
+	window.addEventListener("DOMContentLoaded",function(){
+		var demo = didi.demoPlugin({color:"red"}),
+			btn_run = document.getElementById("btn_run"),
+			btn_stop = document.getElementById("btn_stop");
+
+		btn_run.addEventListener("click",function(){
+			if(demo){
+				demo.run();
+			}
+		},false);
+
+		btn_stop.addEventListener("click",function(){
+			if(demo){
+				demo.stop();
+			}
+		},false);
+
+	},false);
+	
+	</script>
+</head>
+<body>
+	<button id="btn_run">RUN</button>
+	<button id="btn_stop">STOP</button>
+</body>
+</html>
