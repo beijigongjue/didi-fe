@@ -64,7 +64,7 @@
 	
 效果：
 
-![字体效果](images/imgs-note/QQ20140423-1.png)
+![字体效果](../images/imgs-note/QQ20140423-1.png)
 
 
 ####什么是Icon-Face技术
@@ -90,4 +90,16 @@
 ####Icon-Font与Css-Sprites
 ####Css-Sprite与Data-URI
 ####SVG字体图标
+
+####有用的连接：
+
+- [前端观察](http://www.qianduan.net/css3-icon-font-guide.html)
+- [阿里巴巴iconfont库](http://www.iconfont.cn/)
+- [免费生成图标字体](http://fontello.com/)
+- [免费字体下载](http://www.exljbris.com/fontinsans.html)
+- [网页设计图标字体的简单方法](http://yife.im/web-design-icon-fonts-simple-way/)
+- [ICON字体的优缺点](http://cube.qq.com/?p=476)
+- [FontCreator下载地址](http://www.high-logic.com/font-editor/fontcreator.html)
+- [WebFont-Generator](http://www.fontsquirrel.com/tools/webfont-generator)
+- [Fontawesome for bootstroop](http://fontawesome.io/)
 	
