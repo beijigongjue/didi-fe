@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dialog Example</title>
+	<style type="text/css">
+	.didi-dialog-wall{ position:absolute; left:0px; top:0px; display:none; z-index: 9998; }
+	.didi-dialog-wrap{ box-sizing: border-box; text-align:center; position:absolute; border-radius: 5px; -webkit-border-radius: 8px; background:#e8e7e6; display: none; z-index: 9999; }
+	.didi-dialog-bar{ -webkit-border-top-left-radius: 8px; -webkit-border-top-right-radius: 8px; border-top-left-radius: 8px; border-top-right-radius: 8px; margin: 0px; height: 8px; background-color: #ff8a01; box-sizing: content-box; }
+	.didi-dialog-content{ height: 96.2%; width: 86%; display: inline-block; padding:0px; }
+	.didi-dialog-icon{ margin: 20px 0 0 0; z-index:10001; opacity:1.0; filter:alpha(opacity=100); }
+	.didi-dialog-title{ font-weight:600;}
+	.didi-dialog-p{ margin:0px; z-index:10011; opacity: 1.0; filter:alpha(opacity=100); }
+	.didi-dialog-footer{ margin: 18px 0px; }
+	.didi-dialog-footer a{ cursor:default; display: inline-block; width: 100%; height: 43px; line-height: 43px; border-radius: 5px; font-size: 1.08em; font-weight: 600; text-decoration: none; box-sizing: border-box; }
+	.btn-orange{ background-color:#ff8a01; color:#ffffff; }
+	</style>
+</head>
+<body>
+	<input type="button" id="btn-dialog-loading" value="LOADING" />
+	<input type="button" id="btn-dialog-alert" value="ALERT" />
+	<input type="button" id="btn-dialog-confirm" value="CONFIRM" />
+	<script type="text/javascript" src="didi.dialog.js"></script>
+	<script type="text/javascript">
+	window.addEventListener("DOMContentLoaded",function(ev){
+		var btnLoading = document.getElementById("btn-dialog-loading"),
+			btnAlert = document.getElementById("btn-dialog-alert"),
+			btnConfirm = document.getElementById("btn-dialog-confirm");
+
+		/**
+		 * LOASDING弹出框
+		 * @param  {[type]} ev [description]
+		 * @return {[type]}    [description]
+		 */
+		btnLoading.addEventListener("click",function(ev){
+			if(didi && typeof didi.loading === "function"){
+				didi.loading("请稍后...", 3000,  function(){
+					console.log("timeout, trigger the hide callback! ");
+				}, function(){
+					console.log("show! ");
+				});
+			}
+		},false);
+
+		/**
+		 * ALERT弹出框
+		 * @param  {[type]} ev [description]
+		 * @return {[type]}    [description]
+		 */
+		btnAlert.addEventListener("click",function(ev){
+			if(didi && typeof didi.alert === "function"){
+				didi.alert("请输入大发发萨法是地方是!",function(){
+					alert("我知道了");
+				});
+			}
+		},false);
+
+
+		/**
+		 * CONFIRM弹出框
+		 */
+		btnConfirm.addEventListener("click",function(ev){
+			if(didi && typeof didi.confirm === "function"){
+				didi.confirm("确定取消此次打车吗？",function(){
+					alert("确定！");
+				},function(){
+					alert("取消！");
+				});
+			}
+		},false);
+	},false);
+	</script>
+</body>
+</html>
