@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Touch事件类型</title>
+</head>
+<body>
+	<canvas id="cv-test" width="400px" height="400px">
+		<p>Your brower isn't support this !</p>
+	</canvas>
+	<script type="text/javascript">
+	window.addEventListener("load",function(){
+		var cvTest = document.getElementById("cv-test");
+
+		/**
+		 * 处理程序
+		 * @param  {[type]} ev [description]
+		 * @return {[type]}    [description]
+		 */
+		function onTouchEvent(ev){
+			console.log(ev.type);
+		}
+
+		cvTest.addEventListener("touchstart",onTouchEvent,false);
+		cvTest.addEventListener("touchmove",onTouchEvent,false);
+		cvTest.addEventListener("touchend",onTouchEvent,false);
+
+	},false);
+	</script>
+</body>
+</html>
