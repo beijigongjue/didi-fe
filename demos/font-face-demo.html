@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>@font-face属性demo</title>
+	<style type="text/css">
+		/*目标服务器内要有相应的字体*/
+		@font-face{
+			font-family: WebFont;
+			src: url('/static/webapp/font/Fontin_Sans_R_45b.otf') format("opentype");
+			font-weight: 700;			
+		}
+		h1{
+			font-family: WebFont;
+			font-size: 60px;
+			text-align: center;
+			border: solid 1px #4488aa;
+			margin: 20px;
+			padding: 5px;
+		}
+		address{
+			font-family: WebFont;
+			font-size: 14px;
+			font-style: normal;
+			text-align: center;
+			margin: 20px;
+			padding: 5px;			
+		}
+	</style>
+</head>
+<body>
+	<h1>Cascading style sheets</h1>
+	<address>This page use font-face ssss</address>
+</body>
+</html>
