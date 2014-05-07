@@ -9,7 +9,7 @@
 ###LIU
 ---
 
-1. demoPlugin－－knowledge
+1. demoPlugin－－knowledge [demo](demos/demoPlugin/index.html)
 2. singleton－－knowledge
 3. input event continue ajax－－project
 4. frontend technology standard－－knowledge
