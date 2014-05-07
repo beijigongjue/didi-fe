@@ -10,7 +10,10 @@
 ---
 
 1. demoPlugin－－knowledge
-2. 
+2. singleton－－knowledge
+3. input event continue ajax－－project
+4. frontend technology standard－－knowledge
+5. frontend technology system－－knowledge
 
 ###MA
 ---
