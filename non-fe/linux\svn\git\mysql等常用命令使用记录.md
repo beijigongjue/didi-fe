@@ -53,6 +53,8 @@
       6. gzip filename－－压缩为filename.gz
       7. tar zxvf filename.tar.gz－－解压.tar.gz并解包
       8. tar zcvf filename.tar.gz DIRNAME－－打包文件夹并压缩为tar.gz
+      9. du -sh f-weixin-sug 查看文件夹占用的磁盘空间
+
 
 
 ###三、Linux命令（不常用篇）
