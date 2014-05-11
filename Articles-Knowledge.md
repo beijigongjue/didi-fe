@@ -17,3 +17,5 @@
 8. [Load和DOMContentLoaded详解](http://www.cnblogs.com/hh54188/archive/2013/03/01/2939426.html) 
 9. [GOOGLE代码风格之HTML/CSS](http://chajn.org/htmlcssguide/htmlcssguide.html)
 10. [某些Android上圆角溢出](https://github.com/yisibl/blog/issues/2) [参考2](http://jsbin.com/zexeyeli/2/edit)
+11. [viewport详解](http://www.w3cfuns.com/thread-5596726-1-1.html)
+12. [html5的meta详解](http://www.w3cfuns.com/thread-5595925-1-1.html)
