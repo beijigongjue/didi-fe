@@ -5,8 +5,19 @@
 1. 首先备份软件源 `cp /etc/apt/sources.list /etc/apt/sources.list_bak`   
 2. 然后去 [源地址](http://wiki.ubuntu.org.cn/%E6%BA%90%E5%88%97%E8%A1%A8) 找到对应的源   
 3. `sudo gedit /etc/apt/sources.list`将源列表到粘贴源，保存即可
-4. sudo apt-get update
-
+4. sudo apt-get update    
+5. 推荐使用
+ 
+		deb http://mirrors.163.com/ubuntu/ raring main restricted universe multiverse
+		deb http://mirrors.163.com/ubuntu/ raring-security main restricted universe multiverse
+		deb http://mirrors.163.com/ubuntu/ raring-updates main restricted universe multiverse
+		deb http://mirrors.163.com/ubuntu/ raring-proposed main restricted universe multiverse
+		deb http://mirrors.163.com/ubuntu/ raring-backports main restricted universe multiverse
+		deb-src http://mirrors.163.com/ubuntu/ raring main restricted universe multiverse
+		deb-src http://mirrors.163.com/ubuntu/ raring-security main restricted universe multiverse
+		deb-src http://mirrors.163.com/ubuntu/ raring-updates main restricted universe multiverse
+		deb-src http://mirrors.163.com/ubuntu/ raring-proposed main restricted universe multiverse
+		deb-src http://mirrors.163.com/ubuntu/ raring-backports main restricted universe multiverse
 
 ###常用apt命令：
 
