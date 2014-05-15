@@ -19,12 +19,14 @@
 
 1. 简易接口（不推荐使用）
 	
-		http://diditaxi.com.cn/api/v2/webapp?channel=1210&d=130002030203
+		1. http://diditaxi.com.cn/api/v2/webapp?channel=1210&d=130002030203
+		2. http://webapp.diditaxi.com.cn/?channel=1210&d=130002030203
 
 2. 高级接口
 
-        http://diditaxi.com.cn/api/v2/webapp?city=北京&maptype=wgs84&fromlat=39.98096907577634&fromlng= 116.30000865410719&fromaddr=银科大厦&toaddr=上地&toshop=&channel=1210&d=130002030203
-
+        1. http://diditaxi.com.cn/api/v2/webapp?city=北京&maptype=wgs84&fromlat=39.98096907577634&fromlng= 116.30000865410719&fromaddr=银科大厦&toaddr=上地&toshop=&channel=1210&d=130002030203
+        
+		2. http://webapp.diditaxi.com.cn/?city=北京&maptype=wgs84&fromlat=39.98096907577634&fromlng= 116.30000865410719&fromaddr=银科大厦&toaddr=上地&toshop=&channel=1210&d=130002030203
 
 ####接口参数说明
 
