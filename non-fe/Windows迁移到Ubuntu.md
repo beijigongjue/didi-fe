@@ -42,6 +42,13 @@
     sudo apt-get autorem‍ove 删除系统不再使用的孤立软件
 
 
+###chromium [参考地址](http://wiki.ubuntu.org.cn/Chromium%E6%B5%8F%E8%A7%88%E5%99%A8)
+
+	sudo add-apt-repository  ppa:chromium-daily/stable
+	sudo apt-get update
+	sudo apt-get install chromium-browser
+
+
 ###nodejs
 
 如果不是想使用最新版的特性，还是别编译源码了，直接使用`sudo apt-get install nodejs`就行了
