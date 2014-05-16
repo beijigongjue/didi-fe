@@ -8,43 +8,62 @@
 
 
 ###一、svn命令
-    
-      1. svn co svn://10.10.10.60/xiaoju/server/trunk/api/v2/views
-      2. svn export svn://10.10.10.60/xiaoju/server/trunk/api/v2/views 一般用于打包程序，不会包含.svn文件夹
-      3. svn ci  filename -m "checkin note”
-      4. svn st -v/-u
-      5. svn up
-      6. svn up –r 200 file.c 将本地的file.c还原为200版本，并提交到服务器【本地是拿下来了，版本库端并没有被变】
-      7. svn diff filename
-      8. svn diff  -r 12302:12304 home.html
-      9. svn diff get_hb_list.tpl |vim -R -
-      10. svn diff filename -r1234:2345[|vim -R -]
-      11. svn log filename
-      12. svn delete filename
-      13. svn delete –force over-there －－强制删除
-      14. svn add filename －－增加文件到本地svn数据库
-      15. svn propset svn:ignore "*.jpg"
-      16. svn list svn://10.10.10.60/xiaoju/server/trunk/api/v2/views －－查看svn在某个目录下纳入管理的文件列表
-      17. svn import $DIR $URL -m “Something your want to mark.” －－将本地目录纳入svn版本管理
-      18. svn mkdir－－svn mkdir newdir，－－svn mkdir -m "Making a new dir." http://svn.red-bean.com/repos/newdir
-      19. svn cat -r 10528 home.html －－查看历史版本
-      20. svn resolve --accept working compressed，svn revert compressed－－解决目录compressed树冲突
-      21. ci的时候出现 xx.html is out of date－－解决方法就是先update一下，然后再ci
-      22. svn revert filename
-      22. 冲突的解决方法：
-        1. 先将.mine文件拷贝到你自己的文件
-        2. 先跟test.html跟低版本的比较
-        3. 再将test.html跟高版本的比较
-        4. 解决完冲突之后再diff一下
-        5. 然后设置svn resolved test.html
-        6. 然后ci
-        
+
+####基础
+
+----
+
+1. `svn list svn://10.10.10.60/xiaoju/server/static/` -- show list
+2. `svn co svn://10.10.10.60/xiaoju/server/trunk/api/v2/views` -- checkout
+3. `svn add xx` -- add files or folders
+4. `svn import $DIR $URL -m “Something your want to mark.”` -- import local folder to svn and commit to remote
+4. `svn rm file` -- remove
+5. `svn mv old_file new_file` -- move or rename
+5. `svn up` -- update
+3. `svn ci  filename -m "checkin note”` -- checkin
+4. `svn st -v/-u` -- show status
+5. `svn log filename` -- show logs
+6. `svn cat -r 10528 home.html ` -- show history 
+6. `svn delete filename` -- delete
+13. `svn delete –force over-there` -- force to delete
+
+
+####进阶
+
+----
+
+1. `svn export svn://10.10.10.60/xiaoju/server/trunk/api/v2/views` -- use for release project, without .svn folder
+8. `svn diff -r 12302:12304 home.html` -- diff two files
+2. `svn diff filename` -- show difference from the working file and the latest version
+2. `svn diff get_hb_list.tpl |vim -R -` -- use vim to diff two files
+4. `svn diff filename -r1234:2345[|vim -R -]` -- use vim to diff two files
+3. `svn up –r 200 file.c` -- 将本地的file.c还原为200版本，【本地是拿下来了，版本库端并没有改变】
+1. `svn mkdir newdir`
+1. `svn mkdir newdir -m "Making a new dir" svn://10.10.10.60/xiaoju/server/`
+20. svn resolve --accept working compressed，svn revert compressed－－解决目录compressed树冲突
+22. svn revert filename
+22. 冲突的解决方法：
   
+		1. 先将.mine文件拷贝到你自己的文件
+		2. 先跟test.html跟低版本的比较
+		3. 再将test.html跟高版本的比较
+		4. 解决完冲突之后再diff一下
+		5. 然后设置svn resolved test.html
+		6. 然后ci
+		
+23. ci的时候出现 xx.html is out of date－－解决方法就是先update一下，然后再ci  
 
 
-###二、Linux命令（实用篇）
+###二、Linux命令（常用）
 
-    
+
+	  1. ls
+	  2. ll
+	  3. cp
+	  4. mv
+	  5. scp
+	  6. rm
+	  7. xx						    
       1. scp  -r  $DIR $DIR －－scp -r 113.11.197.199:~/app/api/v2/views/webapp/home.html . 12505cp -r 
       2. tar xvf filename.tar－－解包（tar是打包不是压缩）
       3. tar cvf filename.tar DIRNAME－－打包
@@ -57,7 +76,7 @@
 
 
 
-###三、Linux命令（不常用篇）
+###三、Linux命令（不常用）
 
       1. hostname－－显示主机名
       2. top－－显示进程
@@ -80,9 +99,9 @@
 
 ###四、mysql
 
-      1. desc tablename;
-      2. show databases;
-      3. show tables;
+      1. desc tablename; -- 查看表结构
+      2. show databases; -- 查看所有的数据
+      3. show tables; -- 查看表
 
 
 ###五、git命令

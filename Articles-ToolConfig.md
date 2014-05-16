@@ -12,6 +12,7 @@
 2. Charles配置 [参考1](http://www.36ria.com/6278) [参考1](http://www.36ria.com/6278)
 3. [前端性能工具](http://blog.csdn.net/hualusiyu/article/details/10585359)
 4. [Git分支管理](http://www.ruanyifeng.com/blog/2012/07/git.html)
+5. [Git简易教程](http://www.bootcss.com/p/git-guide/)
 
 
 ###A同学

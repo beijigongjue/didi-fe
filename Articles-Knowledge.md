@@ -19,3 +19,4 @@
 10. [某些Android上圆角溢出](https://github.com/yisibl/blog/issues/2) [参考2](http://jsbin.com/zexeyeli/2/edit)
 11. [viewport详解](http://www.w3cfuns.com/thread-5596726-1-1.html)
 12. [html5的meta详解](http://www.w3cfuns.com/thread-5595925-1-1.html)
+13. [浏览器渲染优化](https://github.com/puterjam/speed_render)
