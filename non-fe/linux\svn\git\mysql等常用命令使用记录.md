@@ -56,57 +56,67 @@
 
 ###二、Linux命令（常用）
 
+####1. 基础
 
-	  1. ls
-	  2. ll
-	  3. cp
-	  4. mv
-	  5. scp
-	  6. rm
-	  7. xx						    
-      1. scp  -r  $DIR $DIR －－scp -r 113.11.197.199:~/app/api/v2/views/webapp/home.html . 12505cp -r 
-      2. tar xvf filename.tar－－解包（tar是打包不是压缩）
-      3. tar cvf filename.tar DIRNAME－－打包
-      4. gunzip gilename.gz－－解压gz文件
-      5. gzip -d filename.gz－－解压文件
-      6. gzip filename－－压缩为filename.gz
-      7. tar zxvf filename.tar.gz－－解压.tar.gz并解包
-      8. tar zcvf filename.tar.gz DIRNAME－－打包文件夹并压缩为tar.gz
-      9. du -sh f-weixin-sug 查看文件夹占用的磁盘空间
+----
 
-
-
-###三、Linux命令（不常用）
-
-      1. hostname－－显示主机名
-      2. top－－显示进程
-      3. tail -f /home/xiaoju/php/logs/v2/didi.log.wf  |grep wxtransaction -A10 —color
-      4. curl
-      5. wget
-      6. 安装wget的方法
-    
-        1. curl -O http://ftp.gnu.org/gnu/wget/wget-1.13.4.tar.gz
-        2. tar -xzvf wget-1.13.4.tar.gz
-        3. cd wget-1.13.4
-        4. ./configure --with-ssl=openssl
-        5. make
-        6. sudo make install
-        
-      7. ifconfig en0
-      8. ping ifconfig.me
-      9. curl ifconfig.me
-    
-
-###四、mysql
-
-      1. desc tablename; -- 查看表结构
-      2. show databases; -- 查看所有的数据
-      3. show tables; -- 查看表
+1. ls
+2. cp
+4. mv
+5. scp
+6. rm				    
+1. scp  -r  $DIR $DIR －－ scp -r 113.11.197.199:~/app/api/v2/views/webapp/home.html . 12505cp -r 
+2. tar xvf filename.tar －－ 解包（tar是打包不是压缩）
+3. tar cvf filename.tar DIRNAME －－ 打包
+4. gunzip gilename.gz －－ 解压gz文件
+5. gzip -d filename.gz －－ 解压文件
+6. gzip filename －－ 压缩为filename.gz
+7. tar zxvf filename.tar.gz －－ 解压.tar.gz并解包
+8. tar zcvf filename.tar.gz DIRNAME －－ 打包文件夹并压缩为tar.gz
+9. du -sh f-weixin-sug  －－ 查看文件夹占用的磁盘空间
 
 
-###五、git命令
 
-####Create a new repository on the command line
+####2. 进阶
+
+1. hostname－－显示主机名
+2. top－－显示进程
+3. tail -f /home/xiaoju/php/logs/v2/didi.log.wf  |grep wxtransaction -A10 —color
+4. curl
+5. wget
+6. 安装wget的方法
+
+		1. curl -O http://ftp.gnu.org/gnu/wget/wget-1.13.4.tar.gz
+		2. tar -xzvf wget-1.13.4.tar.gz
+		3. cd wget-1.13.4
+		4. ./configure --with-ssl=openssl
+		5. make
+		6. sudo make install
+
+7. ifconfig en0     
+8. ping ifconfig.me
+8. curl ifconfig.me
+
+###三、git -- Linux & mac
+
+####1. 安装和配置
+
+**Install:**
+
+      sudo apt-get install git-core
+      git --version
+
+**Setting** [参考地址](http://blog.csdn.net/alex_my/article/details/8741615)
+
+1. 生成ssh-key `sudo ssh-keygen -t rsa -C "my first ssh-key` [参考地址](http://blog.csdn.net/alex_my/article/details/8741625)    
+2. 使用vi命令查看生成的ssh_key.pub内容并复制添加到Github上面的SSH Key里面    
+3. 测试一下本地git跟github是否连接    
+	
+		ssh git@github.com 会提示输入密码，也就是生成的ssh_key的密码，整个过程如下：
+	
+		parallels@ubuntu:~$ ssh git@github.com		The authenticity of host 'github.com (192.30.252.130)' can't be established.		RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.		Are you sure you want to continue connecting (yes/no)? yes		Warning: Permanently added 'github.com,192.30.252.130' (RSA) to the list of known hosts.		PTY allocation request failed on channel 0		Hi liujb! You've successfully authenticated, but GitHub does not provide shell access.		Connection to github.com closed.
+			
+####2. Create a new repository on the command line
 
     touch README.md
     git init
@@ -115,11 +125,35 @@
     git remote add origin git@github.com:liujb/c-study.git
     git push -u origin master
     
-####Push an existing repository from the command line
+####3. Push an existing repository from the command line
 
     git remote add origin git@github.com:liujb/c-study.git
     git push -u origin master
     
-###OS X下git status中文会显示为编码的解决方案
+
+####4. Basic command
+
+1. git clone git@github.com:liujb/didi-fe.git
+2. git status
+3. git add file
+4. git rm file
+5. git commit file -m "These is comment"
+6. git pull origin master
+6. git push origin master
+7. git branch f-test-branch master -- 从master分支创建分支
+8. git checkout f-test-branch -- 切换到f-test-branch分支
+8. git branch -- 查看分支 
+7. git checkout -b f-test-branch master -- 创建分支并切换到新创建的f-test-branch分支
+8. 
+    
+####5. OS X下git status中文会显示为编码的解决方案
 
     git config --global core.quotepath false
+
+###五、mysql
+
+      1. desc tablename; -- 查看表结构
+      2. show databases; -- 查看所有的数据
+      3. show tables; -- 查看表
+
+
