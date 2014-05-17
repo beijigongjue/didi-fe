@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>transition-transform</title>
+    <link rel="stylesheet" type="text/css" href="../base.css">
+    <style type="text/css">
+    div{
+        width: 200px;
+        height: 200px;
+        line-height: 200px;
+        display: inline-block;
+        background-color: #ff8a01;
+        text-align: center;
+
+        position: absolute;
+        left: 0px;
+        -webkit-transform: rotate(0deg);
+        -webkit-transition: left 1s linear, -webkit-transform 1s linear;
+
+        -moz-transform: rotate(0deg);
+        -moz-transition: left 1s linear, -moz-transform 1s linear;
+
+        -o-transform: rotate(0deg);
+        -o-transition: left 1s linear, -o-transform 1s linear;
+
+    }
+    div:hover{
+        position: absolute;
+        left: 200px;
+        -webkit-transform: rotate(720deg);
+        -moz-transform: rotate(720deg);
+        -o-transform: rotate(720deg);
+    }
+    </style>
+</head>
+<body>
+    <div>Example words</div>
+</body>
+</html>

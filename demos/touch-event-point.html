@@ -1,32 +1,32 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Touch事件触控点</title>
-	<script type="text/javascript" src="touchUtils.js"></script>
+    <meta charset="UTF-8">
+    <title>Touch事件触控点</title>
+    <script type="text/javascript" src="file:///Users/kimi/git/didi-fe/demos/touchUtils.js"></script>
 </head>
 <body>
-	<canvas id="cv-test" width="400px" height="400px">
-		<p>Your brower isn't support this !</p>
-	</canvas>
-	<script type="text/javascript">
-	window.addEventListener("load",function(){
-		var cvTest = document.getElementById("cv-test");
+    <canvas id="cv-test" width="400px" height="400px">
+        <p>Your brower isn't support this !</p>
+    </canvas>
+    <script type="text/javascript">
+    window.addEventListener("load",function(){
+        var cvTest = document.getElementById("cv-test");
 
-		var touchObj = touchUtils.calcPoint(cvTest);
+        var touchObj = touchUtils.calcPoint(cvTest);
 
-		/**
-		 * [description]
-		 * @param  {[type]} ev [description]
-		 * @return {[type]}    [description]
-		 */
-		cvTest.addEventListener('touchmove',function(ev){
-			console.log(JSON.stringify(touchObj));
-		},false);
-		
+        /**
+         * [description]
+         * @param  {[type]} ev [description]
+         * @return {[type]}    [description]
+         */
+        cvTest.addEventListener('touchmove',function(ev){
+            console.log(JSON.stringify(touchObj));
+        },false);
 
 
-	},false);
-	</script>
+
+    },false);
+    </script>
 </body>
 </html>

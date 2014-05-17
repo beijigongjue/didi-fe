@@ -2,21 +2,19 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" media="(device-height: 568px)">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
 	<title>Transition</title>
-
 	<link rel="stylesheet" type="text/css" href="../base.css">
 	<style type="text/css">
 	body{ background-color: #d7d7d7; }
 	.main1{ background-color: #d7d7d7; height: 100%; opacity: 1;transition:opacity 1s; }
-	.animation{ background-color: #ff8a01; display: inline-block; height: 480px; width: 272px; position:relative; left:-85%; opacity: 1; transition: left 1s,opacity 1s ; /*transition: width 2s; */}
-	.left-transi{ left:0%;  /*opacity: 0.6; *//*width: 500px; */}
+	.animation{ background-color: #ff8a01; display: inline-block; height: 480px; width: 272px; position:relative; left:-85%; opacity: 1; transition: transform 1s,opacity 1s ; /*transition: width 2s; */}
+	.left-transi{ transform: translate3D(500px,0,0); /*opacity: 0.6; *//*width: 500px; */}
 	.opacity-transi{ opacity: 0.5; }
 	</style>
 </head>
 <body>
 <div class="main1">
-
 	<div class="animation">哈哈好</div>
 </div>
 <script type="text/javascript">
