@@ -6,7 +6,7 @@
 2. 然后去 [源地址](http://wiki.ubuntu.org.cn/%E6%BA%90%E5%88%97%E8%A1%A8) 找到对应的源   
 3. `sudo gedit /etc/apt/sources.list`将源列表到粘贴源，保存即可
 4. sudo apt-get update    
-5. 推荐使用
+5. 推荐使用 -- 针对13.04
  
 		deb http://mirrors.163.com/ubuntu/ raring main restricted universe multiverse
 		deb http://mirrors.163.com/ubuntu/ raring-security main restricted universe multiverse
@@ -82,8 +82,13 @@ n用法简单，详情查看 `n -h`
 
 1. 不同版本的java
 	
-	 * default-jre	 * gcj-4.6-jre-headless	 * gcj-4.7-jre-headless	 * openjdk-7-jre-headless	 * openjdk-6-jre-headless
-2. 安装方法 
+	 * default-jre
+	 * gcj-4.6-jre-headless
+	 * gcj-4.7-jre-headless
+	 * openjdk-7-jre-headless
+	 * openjdk-6-jre-headless
+
+2. 安装方法 
 	
 		1. sudo apt-get install openjdk-7-jre-headless
 		2. java -version
@@ -140,7 +145,21 @@ n用法简单，详情查看 `n -h`
 	PS：host连接上VPN后，guest可以不用连了，前提是host跟guest是桥接的链接方式
 	
 	2. 整个过程如下
-	parallels@ubuntu:~$ sudo openvpn --config didi.ovpn 	Thu May 15 22:14:55 2014 OpenVPN 2.2.1 x86_64-linux-gnu [SSL] [LZO2] [EPOLL] [PKCS11] [eurephia] [MH] [PF_INET6] [IPv6 payload 20110424-2 (2.2RC2)] built on Feb 13 2013	Enter Auth Username:liujiangbei	Enter Auth Password:	Thu May 15 22:15:00 2014 IMPORTANT: OpenVPN's default port number is now 1194, based on an official port number assignment by IANA.  OpenVPN 2.0-beta16 and earlier used 5000 as the default port.	Thu May 15 22:15:00 2014 NOTE: OpenVPN 2.1 requires '--script-security 2' or higher to call user-defined scripts or executables	Thu May 15 22:15:00 2014 LZO compression initialized	Thu May 15 22:15:00 2014 UDPv4 link local (bound): [undef]	Thu May 15 22:15:00 2014 UDPv4 link remote: [AF_INET]118.244.193.172:1194	Thu May 15 22:15:00 2014 WARNING: this configuration may cache passwords in memory -- use the auth-nocache option to prevent this	Thu May 15 22:15:00 2014 [jx] Peer Connection Initiated with [AF_INET]118.244.193.172:1194	Thu May 15 22:15:03 2014 TUN/TAP device tun0 opened	Thu May 15 22:15:03 2014 do_ifconfig, tt->ipv6=0, tt->did_ifconfig_ipv6_setup=0	Thu May 15 22:15:03 2014 /sbin/ifconfig tun0 10.8.0.34 pointopoint 10.8.0.33 mtu 1500	Thu May 15 22:15:03 2014 Initialization Sequence Completed
+	parallels@ubuntu:~$ sudo openvpn --config didi.ovpn 
+	Thu May 15 22:14:55 2014 OpenVPN 2.2.1 x86_64-linux-gnu [SSL] [LZO2] [EPOLL] [PKCS11] [eurephia] [MH] [PF_INET6] [IPv6 payload 20110424-2 (2.2RC2)] built on Feb 13 2013
+	Enter Auth Username:liujiangbei
+	Enter Auth Password:
+	Thu May 15 22:15:00 2014 IMPORTANT: OpenVPN's default port number is now 1194, based on an official port number assignment by IANA.  OpenVPN 2.0-beta16 and earlier used 5000 as the default port.
+	Thu May 15 22:15:00 2014 NOTE: OpenVPN 2.1 requires '--script-security 2' or higher to call user-defined scripts or executables
+	Thu May 15 22:15:00 2014 LZO compression initialized
+	Thu May 15 22:15:00 2014 UDPv4 link local (bound): [undef]
+	Thu May 15 22:15:00 2014 UDPv4 link remote: [AF_INET]118.244.193.172:1194
+	Thu May 15 22:15:00 2014 WARNING: this configuration may cache passwords in memory -- use the auth-nocache option to prevent this
+	Thu May 15 22:15:00 2014 [jx] Peer Connection Initiated with [AF_INET]118.244.193.172:1194
+	Thu May 15 22:15:03 2014 TUN/TAP device tun0 opened
+	Thu May 15 22:15:03 2014 do_ifconfig, tt->ipv6=0, tt->did_ifconfig_ipv6_setup=0
+	Thu May 15 22:15:03 2014 /sbin/ifconfig tun0 10.8.0.34 pointopoint 10.8.0.33 mtu 1500
+	Thu May 15 22:15:03 2014 Initialization Sequence Completed
 
 ###git
 
@@ -155,7 +174,14 @@ n用法简单，详情查看 `n -h`
 	
 		ssh git@github.com 会提示输入密码，也就是生成的ssh_key的密码，整个过程如下：
 	
-		parallels@ubuntu:~$ ssh git@github.com		The authenticity of host 'github.com (192.30.252.130)' can't be established.		RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.		Are you sure you want to continue connecting (yes/no)? yes		Warning: Permanently added 'github.com,192.30.252.130' (RSA) to the list of known hosts.		PTY allocation request failed on channel 0		Hi liujb! You've successfully authenticated, but GitHub does not provide shell access.		Connection to github.com closed.
+		parallels@ubuntu:~$ ssh git@github.com
+		The authenticity of host 'github.com (192.30.252.130)' can't be established.
+		RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
+		Are you sure you want to continue connecting (yes/no)? yes
+		Warning: Permanently added 'github.com,192.30.252.130' (RSA) to the list of known hosts.
+		PTY allocation request failed on channel 0
+		Hi liujb! You've successfully authenticated, but GitHub does not provide shell access.
+		Connection to github.com closed.
 			
 	[参考地址](http://blog.csdn.net/alex_my/article/details/8741615)
 	
@@ -185,7 +211,12 @@ n用法简单，详情查看 `n -h`
 
 vim的不同种类
 	
- * vim * vim-gnome * vim-tiny * vim-athena * vim-gtk * vim-nox
+ * vim
+ * vim-gnome
+ * vim-tiny
+ * vim-athena
+ * vim-gtk
+ * vim-nox
 
 ###Eclipse
 
