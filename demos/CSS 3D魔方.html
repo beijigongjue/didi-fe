@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+<title>html5</title>
+<style type="text/css">
+	body{
+		font-family: "Comic Sans MS";
+	}
+	#box div{
+		position: absolute;
+		height: 160px;
+		width: 160px;
+		border:3px solid #000;
+		background:rgba(255,200,100,0.8);
+		text-align: center;
+		font-size: 130px;
+	}
+	#box{
+		-webkit-animation-name: animation;
+		-webkit-animation-timing-function: ease-in-out;
+		-webkit-animation-iteration-count: infinite;
+		-webkit-animation-duration: 3s;
+		margin: 80px;
+		-webkit-transform-origin: 80px 80px 0;
+		-webkit-transform-style: preserve-3d;
+	}
+	@-webkit-keyframes animation{
+		from,to{}
+		16%{
+			-webkit-transform:rotateY(-90deg);
+		}
+		33%{
+			-webkit-transform:rotateY(-90deg) rotateZ(135deg);
+		}
+		53%{
+			-webkit-transform:rotateY(225deg) rotateZ(135deg);
+		}
+		83%{
+			-webkit-transform:rotateY(135deg) rotateY(135deg);
+		}
+		100%{
+			-webkit-transform:rotateX(0deg);
+		}
+	}
+	#one{
+		-webkit-transform:translateZ(80px);
+	}
+	#two{
+		-webkit-transform:rotateX(-90deg) translateZ(80px);
+	}
+	#three{
+		-webkit-transform:rotateY(90deg)  rotateX(90deg) translateZ(80px);
+	}
+	#four{
+		-webkit-transform:rotateY(180deg) rotateZ(90deg)  translateZ(80px);
+	}
+	#five{
+		-webkit-transform:rotateY(-90deg) rotateZ(90deg) translateZ(80px) ;
+	}
+	#six{
+		-webkit-transform:rotateY(90deg) translateZ(80px) ;
+	}
+</style>
+</head>
+
+<body>
+	<div id="box">
+		<div id="one">
+			A
+		</div>
+		<div id="two">
+			B
+		</div>
+		<div id="three">
+			C
+		</div>
+		<div id="four">
+			D
+		</div>
+		<div id="five">
+			E
+		</div>
+		<div id="six">
+			F
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+</script>
+</html>

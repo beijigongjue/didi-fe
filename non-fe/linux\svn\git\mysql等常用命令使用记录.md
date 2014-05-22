@@ -96,6 +96,8 @@
 7. ifconfig en0     
 8. ping ifconfig.me
 8. curl ifconfig.me
+9. ps -ef |grep packagename
+10. kill pid
 
 ###三、git -- Linux & mac
 
