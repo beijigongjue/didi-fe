@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>html:5文档</title>
+</head>
+<body>
+<input type="button" id="btn" value="清除">
+<canvas id="canvas" width="1124" height="850" style="width:562px; height:425px" ></canvas>
+
+</body>
+</html>
+<script type="text/javascript">
+
+	var c = document.getElementById("canvas");
+	var ctx = c.getContext("2d");
+
+
+//原始的圆
+function c1() {
+	ctx.beginPath();
+	ctx.arc(560, 440, 332, 0, 2*Math.PI, false);//560+1+332+60/2=561+166+30
+	ctx.strokeStyle = "#f6c288";
+	ctx.stroke();
+	ctx.closePath();
+	ctx.save();
+}
+c1();
+
+
+c2(560,108);//440-332
+//转圈的圆
+function c2(x, y ) {
+	ctx.moveTo(x, y)
+	ctx.beginPath();
+	ctx.arc(x, y, 60, 0, 2*Math.PI, false);
+	ctx.fillStyle = "#ff8900";//#ff8900
+	ctx.strokeStyle = "#f6c288";//#f6c288
+	ctx.stroke();
+	ctx.fill();
+	ctx.closePath();
+}
+
+//加粗的圆
+function c3(endAngle) {
+	ctx.beginPath();
+	ctx.lineCap = "round";
+	ctx.arc(560, 440, 332, startAngle, endAngle, false);
+	ctx.lineWidth = 10;
+	ctx.strokeStyle = "#ff8900";
+	ctx.stroke();
+	ctx.closePath();
+}
+
+
+var i = 0;
+var startAngle = 1.5*Math.PI;
+var set_Interval = setInterval(function() {
+	i++;
+	//清空重新画
+	//ctx.clearRect(0, 0, 950, 850);
+	ctx.fillStyle = "#eeeff0";
+	ctx.fillRect(0, 0, 1124, 1124);
+	ctx.restore();//还原到保存的状态
+	c1();
+
+	//画小圆
+	var scP = equation(560,440,332,Math.PI/30*i);
+	c2(scP.w, scP.h);
+
+	//结束弧度
+	var endAngle = startAngle + Math.PI/30*i;
+	c3(endAngle);
+
+	if (i == 60) {
+		i = 0;
+	}
+}, 100);
+
+var oBtn = document.getElementById("btn");
+oBtn.onclick=function(){
+	ctx.fillStyle = "#eeeff0";
+	ctx.fillRect(0, 0, 1124, 1124);
+	clearInterval(set_Interval);
+};
+
+//求小圆的圆心
+//参数： 大圆的圆心 半径 弧度
+function equation(x, y, r, radian) {
+
+	return {
+		w: x + r*Math.sin(radian),
+		h: y - r*Math.cos(radian)
+	};
+
+
+}
+
+</script>
